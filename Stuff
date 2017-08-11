@@ -1,0 +1,52 @@
+
+/**
+ * "Stranded on an Island" Decision Game
+ *
+ * @(Wesley Kane)
+ * @(7.29.2017)
+ */
+import java.util.Scanner;
+public class WesIsland
+{
+   public static void main (String[] args)
+   {
+       Scanner input = new Scanner(System.in);
+       
+       System.out.println("* You are stranded on an island, you are starving. Do you eat your foot? *");
+       
+       String YesorNo = input.next();
+       if(YesorNo.equals("yes"))
+       {
+           System.out.println("You ate your foot after cooking it to medium rare. Tastes like chicken.");
+           
+       }
+       else if(YesorNo.equals("no"))
+       {
+           System.out.println("* You decide against it, and now you become even more hungry to the point you start hillucinating. Do you go search for food or try to sleep? *");
+           
+           String SearchorSleep = input.next();
+           
+           while(!YesorNo.equals("yes")&&!YesorNo.equals("no"))
+           {
+           System.out.println("Please friend, this doesn't have to be difficult! * Enter a valid command (search orsleep)! *"); 
+           YesorNo = input.nextLine(); 
+           }  
+           if (SearchorSleep.equals("search"))
+           {
+             System.out.println("You search a while and get eaten by a flamingo, the end");
+           }
+           else if(!SearchorSleep.equals("sleep"))
+           {
+              System.out.println("You go to sleep and never wake up. The End.");
+           }
+           
+       }
+           
+    
+       }
+       
+       
+       
+   }
+       
+
